@@ -1,0 +1,218 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgb(0 0 0 / 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+  padding: 1rem;
+}
+
+.modal {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  width: 100%;
+  max-width: 32rem; /* max-w-lg */
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.title {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.closeButton {
+  padding: 0.5rem;
+  border-radius: 9999px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  background-color: #e5e7eb;
+}
+
+.closeIcon {
+  height: 1.5rem;
+  width: 1.5rem;
+  color: #4b5563;
+}
+
+.content {
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.formGroup {
+  margin-bottom: 1rem;
+}
+
+.label {
+  display: block;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.25rem;
+}
+
+.dropzone {
+  margin-top: 0.25rem;
+  display: flex;
+  justify-content: center;
+  padding: 1.25rem 1.5rem;
+  border-width: 2px;
+  border-color: #d1d5db;
+  border-style: dashed;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+
+.imagePreview {
+  max-height: 12rem;
+  border-radius: 0.5rem;
+  object-fit: contain;
+}
+
+.dropzonePlaceholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  text-align: center;
+}
+
+.uploadIcon {
+  margin: auto;
+  height: 3rem;
+  width: 3rem;
+  color: #9ca3af;
+}
+
+.uploadText {
+  display: flex;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #4b5563;
+}
+
+.uploadHint {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: #6b7280;
+}
+
+.fileInput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+}
+
+.textarea:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  --tw-ring-color: #14b8a6;
+  box-shadow: 0 0 0 2px var(--tw-ring-color);
+}
+
+.dateTimeGrid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+}
+
+.input:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  --tw-ring-color: #14b8a6;
+  box-shadow: 0 0 0 2px var(--tw-ring-color);
+}
+
+.footer {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.cancelButton {
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #d1d5db;
+  color: #374151;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition-property: background-color;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.cancelButton:hover {
+  background-color: #f3f4f6;
+}
+
+.scheduleButton {
+  padding: 0.5rem 1.5rem;
+  background-color: #0d9488;
+  color: white;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  border: none;
+  cursor: pointer;
+}
+
+.scheduleButton:hover {
+  background-color: #0f766e;
+}
+
+.scheduleButton:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  --tw-ring-offset-width: 2px;
+  --tw-ring-color: #0d9488;
+  box-shadow: 0 0 0 2px var(--tw-ring-color);
+}
+
+
+@media (min-width: 640px) {
+  .dateTimeGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
